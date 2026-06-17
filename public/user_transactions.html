@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker Pro - User Transactions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    
+    <div class="app-layout">
+        <main class="main-content-area" style="margin-left: 0; max-width: 800px; margin: 0 auto; padding-top: 50px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <button class="btn" onclick="window.location.href='/admin.html'" style="width: auto; margin: 0; padding: 10px 20px; background: var(--secondary-color);"><i class="fas fa-arrow-left"></i> Back to Admin</button>
+                <h1 id="user-name-title" style="margin: 0;">User Transactions</h1>
+            </div>
+
+            <section class="page-section active" style="padding-top: 0;">
+                <div class="dashboard-cards" style="margin-bottom: 20px; grid-template-columns: 1fr;">
+                    <div class="inc-exp-container glass-panel">
+                        <div>
+                            <h4>Total Income</h4>
+                            <p id="money-plus" class="money plus">+₹0.00</p>
+                        </div>
+                        <div class="divider"></div>
+                        <div>
+                            <h4>Total Expense</h4>
+                            <p id="money-minus" class="money minus">-₹0.00</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="history-container glass-panel">
+                    <h3 style="border-bottom: 1px solid var(--border-color); padding-bottom: 10px; margin-bottom: 15px;">Transaction History</h3>
+                    <ul id="user-transactions-list" class="list" style="max-height: 60vh; overflow-y: auto;">
+                        <li style="text-align:center; padding: 20px; opacity: 0.7;">Loading transactions...</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="user_transactions.js"></script>
+</body>
+</html>

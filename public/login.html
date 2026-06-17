@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker Pro - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .auth-container { max-width: 400px; margin: 100px auto; text-align: center; }
+        .auth-form { margin-top: 30px; text-align: left; }
+        .toggle-auth { cursor: pointer; color: var(--accent-color); text-decoration: underline; margin-top: 15px; display: inline-block;}
+        #register-fields { display: none; }
+    </style>
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    <div class="container glass-panel auth-container">
+        <h2><span id="auth-title">Login</span> to Tracker <span>Pro</span></h2>
+        <form class="auth-form" id="auth-form">
+            <div id="register-fields">
+                <div class="form-control">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" />
+                </div>
+                <div class="form-control">
+                    <label for="role">Account Type</label>
+                    <select id="role" style="width: 100%; padding: 14px 16px; border-radius: 12px; border: 1px solid var(--border-color); background: rgba(0, 0, 0, 0.2); color: var(--text-primary); margin-bottom: 15px;">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter email" required />
+            </div>
+            <div class="form-control">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password" required />
+            </div>
+            <button type="submit" class="btn" id="auth-btn">Login</button>
+        </form>
+        <p class="toggle-auth" id="toggle-auth">Need an account? Register</p>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
